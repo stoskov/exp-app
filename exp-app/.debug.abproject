@@ -1,8 +1,6 @@
 {
   "CorePlugins": [
-    "org.apache.cordova.battery-status",
-    "org.apache.cordova.camera",
     "org.apache.cordova.console",
-    "org.apache.cordova.media-capture"
+    "org.apache.cordova.geolocation"
   ]
 }

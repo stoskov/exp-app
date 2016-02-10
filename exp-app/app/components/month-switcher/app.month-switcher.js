@@ -9,28 +9,43 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var MonthSwitcher;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            MonthSwitcher = (function () {
+                function MonthSwitcher() {
+                    this.month = 2;
+                    this.year = 2016;
                 }
-                AppComponent = __decorate([
+                MonthSwitcher.prototype.increaseMonth = function () {
+                    this.month++;
+                    if (this.month > 12) {
+                        this.year++;
+                        this.month = 1;
+                    }
+                };
+                MonthSwitcher.prototype.decreaseMonth = function () {
+                    this.month--;
+                    if (this.month < 1) {
+                        this.year--;
+                        this.month = 12;
+                    }
+                };
+                MonthSwitcher = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<h1>My First Angular 2 App 23</h1>'
+                        selector: 'month-switch',
+                        templateUrl: "app/components/month-switcher/month-switcher.html"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], MonthSwitcher);
+                return MonthSwitcher;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("MonthSwitcher", MonthSwitcher);
         }
     }
 });
-
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=app.month-switcher.js.map
