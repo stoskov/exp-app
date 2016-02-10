@@ -18,6 +18,27 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             ExpensesService = (function () {
                 function ExpensesService() {
+                    this.expenses = [{
+                            amount: 240,
+                            category: "amazonde",
+                            date: "1.12.2015"
+                        }, {
+                            amount: 260,
+                            category: "amazoncouk",
+                            date: "12.12.2015"
+                        }, {
+                            amount: 320,
+                            category: "amazonde",
+                            date: "2.12.2015"
+                        }, {
+                            amount: 350,
+                            category: "amazon",
+                            date: "4.12.2015"
+                        }, {
+                            amount: 240,
+                            category: "amazonde",
+                            date: "7.12.2015"
+                        }];
                 }
                 ExpensesService.prototype.getExpenses = function () {
                     return this.expenses;
