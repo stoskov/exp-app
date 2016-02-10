@@ -9,28 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var NewExp;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            NewExp = (function () {
+                function NewExp() {
                 }
-                AppComponent = __decorate([
+                NewExp = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>My First Angular 2 App 23</h1>'
+                        template: '<h1>New expence</h1>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], NewExp);
+                return NewExp;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("NewExp", NewExp);
         }
     }
 });
-
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=app.new-exp.js.map

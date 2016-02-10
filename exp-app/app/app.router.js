@@ -9,28 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var AppRouter;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            AppRouter = (function () {
+                function AppRouter() {
                 }
-                AppComponent = __decorate([
+                AppRouter = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>My First Angular 2 App 23</h1>'
+                        template: '<h1>Main</h1>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], AppRouter);
+                return AppRouter;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("AppRouter", AppRouter);
         }
     }
 });
-
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=app.router.js.map
