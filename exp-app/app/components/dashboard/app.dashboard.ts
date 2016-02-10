@@ -4,4 +4,4 @@ import {Component} from 'angular2/core';
     selector: 'my-app',
     template: '<h1>Dashboard</h1>'
 })
-export class Dashboard { }
+export class DashboardComponent { }

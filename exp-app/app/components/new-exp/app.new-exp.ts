@@ -4,4 +4,4 @@ import {Component} from 'angular2/core';
     selector: 'my-app',
     template: '<h1>New expence</h1>'
 })
-export class NewExp { }
+export class NewExpComponent { }
