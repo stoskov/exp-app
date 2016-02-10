@@ -2,3 +2,11 @@ a {padding: 5px; text-decoration: none; font-family: Arial, Helvetica, sans-seri
 a:visited, a:link {color: #444;}
 a:hover {color: white; background-color: #1171a3; }
 a.router-link-active {color: white; background-color: #52b9e9; }
+h1 {
+    text-align: center;
+}
+
+router-outlet {
+    display: block;
+    margin-bottom: 20px
+}
