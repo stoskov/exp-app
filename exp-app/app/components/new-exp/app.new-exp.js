@@ -9,26 +9,26 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var NewExp;
+    var NewExpComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            NewExp = (function () {
-                function NewExp() {
+            NewExpComponent = (function () {
+                function NewExpComponent() {
                 }
-                NewExp = __decorate([
+                NewExpComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
                         template: '<h1>New expence</h1>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], NewExp);
-                return NewExp;
+                ], NewExpComponent);
+                return NewExpComponent;
             })();
-            exports_1("NewExp", NewExp);
+            exports_1("NewExpComponent", NewExpComponent);
         }
     }
 });

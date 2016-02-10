@@ -8,23 +8,26 @@ import {
 }
 from "../month-switcher/app.month-switcher";
 
+import {
+    Router
+}
+from 'angular2/router';
+
 @
 Component({
-    selector: "my-app",
+    selector: "my-dashboard",
     templateUrl: "app/components/dashboard/dashboard.html",
     styleUrls: ["app/components/dashboard/dashboard.css"],
     directives: [MonthSwitcher]
 })
-export class Dashboard {
-    _router: any;
-
-    constructor() {}
+export class DashboardComponent {
+    constructor(private _router: Router) {}
 
     onNewExpClicked() {
-        console.log();
+        this._router.navigate(["NewExp"]);
     }
 
     onListExpsesClicked() {
-        console.log();
+        this._router.navigate(["ListExp"]);
     }
 }

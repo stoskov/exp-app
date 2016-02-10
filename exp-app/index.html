@@ -2,8 +2,14 @@
 <html>
 
 <head>
+    <!-- Set the base href -->
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    
     <title></title>
     <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="styles.css">
+    
     <script src="cordova.js"></script>
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
@@ -13,6 +19,10 @@
     <script src="systemjs/dist/system.src.js"></script>
     <script src="rxjs/bundles/Rx.js"></script>
     <script src="angular2/bundles/angular2.dev.js"></script>
+    
+    <!-- Add the router library -->
+    <script src="angular2/bundles/router.dev.js"></script>
+    
 </head>
 
 <body>

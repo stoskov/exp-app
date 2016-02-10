@@ -1,4 +1,6 @@
 import {bootstrap}    from 'angular2/platform/browser'
-import {Dashboard} from './components/dashboard/app.dashboard'
+import {ROUTER_PROVIDERS} from 'angular2/router';
+    
+import {AppRouter} from './app.router'
 
-bootstrap(Dashboard);
+bootstrap(AppRouter, [ROUTER_PROVIDERS]);

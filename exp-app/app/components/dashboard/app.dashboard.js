@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../month-switcher/app.month-switcher"], function(exports_1) {
+System.register(["angular2/core", "../month-switcher/app.month-switcher", 'angular2/router'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,8 +8,8 @@ System.register(["angular2/core", "../month-switcher/app.month-switcher"], funct
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, app_month_switcher_1;
-    var Dashboard;
+    var core_1, app_month_switcher_1, router_1;
+    var DashboardComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -17,29 +17,33 @@ System.register(["angular2/core", "../month-switcher/app.month-switcher"], funct
             },
             function (app_month_switcher_1_1) {
                 app_month_switcher_1 = app_month_switcher_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
-            Dashboard = (function () {
-                function Dashboard() {
+            DashboardComponent = (function () {
+                function DashboardComponent(_router) {
+                    this._router = _router;
                 }
-                Dashboard.prototype.onNewExpClicked = function () {
-                    console.log();
+                DashboardComponent.prototype.onNewExpClicked = function () {
+                    this._router.navigate(["NewExp"]);
                 };
-                Dashboard.prototype.onListExpsesClicked = function () {
-                    console.log();
+                DashboardComponent.prototype.onListExpsesClicked = function () {
+                    this._router.navigate(["ListExp"]);
                 };
-                Dashboard = __decorate([
+                DashboardComponent = __decorate([
                     core_1.Component({
-                        selector: "my-app",
+                        selector: "my-dashboard",
                         templateUrl: "app/components/dashboard/dashboard.html",
                         styleUrls: ["app/components/dashboard/dashboard.css"],
                         directives: [app_month_switcher_1.MonthSwitcher]
                     }), 
-                    __metadata('design:paramtypes', [])
-                ], Dashboard);
-                return Dashboard;
+                    __metadata('design:paramtypes', [router_1.Router])
+                ], DashboardComponent);
+                return DashboardComponent;
             })();
-            exports_1("Dashboard", Dashboard);
+            exports_1("DashboardComponent", DashboardComponent);
         }
     }
 });
