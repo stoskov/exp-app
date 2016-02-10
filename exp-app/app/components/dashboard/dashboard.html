@@ -1,7 +1,10 @@
 <div>
-    <month-switch></month-switch>
+    <month-switch (update)="update($event)"></month-switch>
 </div>
 <div>
     <button (click)="onNewExpClicked()">Add New</button>
     <button (click)="onListExpsesClicked()">List all</button>
+    <div>
+        Total: {{totalExpense}}
+    </div>
 </div>

@@ -18,6 +18,7 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             MonthSwitcher = (function () {
                 function MonthSwitcher() {
+                    this.update = new core_1.EventEmitter();
                     this.month = 2;
                     this.year = 2016;
                 }
@@ -27,6 +28,7 @@ System.register(['angular2/core'], function(exports_1) {
                         this.year++;
                         this.month = 1;
                     }
+                    this._onUpdate();
                 };
                 MonthSwitcher.prototype.decreaseMonth = function () {
                     this.month--;
@@ -34,7 +36,18 @@ System.register(['angular2/core'], function(exports_1) {
                         this.year--;
                         this.month = 12;
                     }
+                    this._onUpdate();
                 };
+                MonthSwitcher.prototype._onUpdate = function () {
+                    this.update.emit({
+                        month: this.month,
+                        year: this.year
+                    });
+                };
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', Object)
+                ], MonthSwitcher.prototype, "update", void 0);
                 MonthSwitcher = __decorate([
                     core_1.Component({
                         selector: 'month-switch',
