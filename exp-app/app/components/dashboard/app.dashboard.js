@@ -37,14 +37,13 @@ System.register(["angular2/core", "../month-switcher/app.month-switcher", "angul
                 DashboardComponent.prototype.onListExpsesClicked = function () {
                     this._router.navigate(["ListExp"]);
                 };
-                DashboardComponent.prototype.update = function (date) {
-                    this.totalExpense = this._expensesService.getTotalExpenses();
+                DashboardComponent.prototype.update = function (data) {
+                    this.totalExpense = this._expensesService.getTotalExpenses(data);
                 };
                 DashboardComponent = __decorate([
                     core_1.Component({
                         selector: "my-dashboard",
-                        templateUrl: "app/components/dashboard/dashboard.html",
-                        styleUrls: ["app/components/dashboard/dashboard.css"],
+                        templateUrl: "app/components/dashboard/app.dashboard.html",
                         directives: [app_month_switcher_1.MonthSwitcher],
                         providers: [Expenses_Service_1.ExpensesService]
                     }), 

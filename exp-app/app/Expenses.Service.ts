@@ -6,23 +6,23 @@ export class ExpensesService {
   expenses:Expense[] = [{
     amount: 240,
     category: "amazonde",
-    date: "1.12.2015"   
+    date: new Date("1.12.2015")
   },{
     amount: 260,
     category: "amazoncouk",
-    date: "12.12.2015"   
+    date: new Date("12.12.2015")
   },{
     amount: 320,
     category: "amazonde",
-    date: "2.12.2015"   
+    date: new Date("2.12.2015")
   },{
     amount: 350,
     category: "amazon",
-    date: "4.12.2015"   
+    date: new Date("4.12.2015")
   },{
     amount: 240,
     category: "amazonde",
-    date: "7.12.2015"   
+    date: new Date("7.12.2015")
   }];
 
   getExpenses() {

@@ -2,7 +2,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
 
 @Component({
     selector: 'month-switch',
-    templateUrl: "app/components/month-switcher/month-switcher.html"
+    templateUrl: "app/components/month-switcher/app.month-switcher.html"
 })
 export class MonthSwitcher {
     @Output() update = new EventEmitter();

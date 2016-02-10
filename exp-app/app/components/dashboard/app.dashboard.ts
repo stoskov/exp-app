@@ -5,8 +5,7 @@ import {ExpensesService} from "app/Expenses.Service";
 
 @Component({
     selector: "my-dashboard",
-    templateUrl: "app/components/dashboard/dashboard.html",
-    styleUrls: ["app/components/dashboard/dashboard.css"],
+    templateUrl: "app/components/dashboard/app.dashboard.html",
     directives: [MonthSwitcher],
     providers: [ExpensesService]
 })

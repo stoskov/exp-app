@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1) {
+System.register(['angular2/core', "../month-switcher/app.month-switcher", "app/Expenses.Service"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,23 +8,36 @@ System.register(['angular2/core'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, app_month_switcher_1, Expenses_Service_1;
     var ListExpComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (app_month_switcher_1_1) {
+                app_month_switcher_1 = app_month_switcher_1_1;
+            },
+            function (Expenses_Service_1_1) {
+                Expenses_Service_1 = Expenses_Service_1_1;
             }],
         execute: function() {
             ListExpComponent = (function () {
-                function ListExpComponent() {
+                function ListExpComponent(_expensesService) {
+                    this._expensesService = _expensesService;
+                    this.update({});
                 }
+                ListExpComponent.prototype.update = function (data) {
+                    this.expences = this._expensesService.getExpenses();
+                };
                 ListExpComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: '<h1>List expences</h1>'
+                        selector: 'my-expenses-list1',
+                        templateUrl: "app/components/list-exp/app.list-exp.html",
+                        directives: [app_month_switcher_1.MonthSwitcher],
+                        providers: [Expenses_Service_1.ExpensesService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [Expenses_Service_1.ExpensesService])
                 ], ListExpComponent);
                 return ListExpComponent;
             })();

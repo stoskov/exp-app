@@ -51,7 +51,7 @@ System.register(['angular2/core'], function(exports_1) {
                 MonthSwitcher = __decorate([
                     core_1.Component({
                         selector: 'month-switch',
-                        templateUrl: "app/components/month-switcher/month-switcher.html"
+                        templateUrl: "app/components/month-switcher/app.month-switcher.html"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MonthSwitcher);
