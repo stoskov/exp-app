@@ -30,6 +30,9 @@ System.register(['angular2/core', "../month-switcher/app.month-switcher", "app/E
                 ListExpComponent.prototype.update = function (data) {
                     this.expences = this._expensesService.getExpenses();
                 };
+                ListExpComponent.prototype.delete = function (exp) {
+                    console.log(exp);
+                };
                 ListExpComponent = __decorate([
                     core_1.Component({
                         selector: 'my-expenses-list1',

@@ -4,7 +4,8 @@
 <div>
     <div>
         <div *ngFor="#exp of expences">
-            {{exp.date | date:"dd/MM/yyyy" }} : {{exp.category}} : {{exp.amount}}
+            {{exp.date | date:"dd/MM/yyyy" }} : {{exp.category}} : {{exp.amount}} 
+            <span (click)="delete(exp)">[delete]</span>
         </div>
     </div>
 </div>

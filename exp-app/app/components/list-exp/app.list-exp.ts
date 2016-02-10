@@ -19,4 +19,8 @@ export class ListExpComponent {
     update(data) {
         this.expences = this._expensesService.getExpenses();
     }
+
+	delete(exp: Expense) {
+    	console.log(exp);
+	}
 }
